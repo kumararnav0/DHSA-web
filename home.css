@@ -1,0 +1,60 @@
+body {
+    background-image: url('background/bg1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+    
+
+
+
+
+.association-name {
+    font-size: 50px; /* Adjust size as needed */
+    font-family: 'Tan Headline', Times, serif;
+    white-space: nowrap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tan+Headline&display=swap');
+
+span {
+    font-family: 'Tan Headline', Times, serif;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    font-size: 20px; /* Adjust size as needed */
+    font-weight: bold;
+    color: black;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+.hinditext{
+    text-align: center;
+    font-size: 100px;
+    margin-top: 100px;
+    color: whitesmoke;
+    font-family: 'TT Drugs', sans-serif;
+}
+.engtext{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 25px;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
