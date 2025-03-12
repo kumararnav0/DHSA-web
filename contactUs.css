@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Tan+Headline&family=Rozha+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&family=Audiowide&family=Playfair+Display:wght@400;700&family=Pirata+One&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: transparent; /* Ensure body background is transparent */
+}
+
+body::before {
+    content: '';
+    background-image: url('background/bg1.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed; /* Fix the background to the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(to right, orange 0%, transparent 150%);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduced gap between logo and name */
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%; /* Makes the logo circular */
+    border: 3px solid white; /* Adds a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+.association-name {
+    font-size: 2.394rem; /* Decreased by 5% (from 2.52rem to 2.394rem) */
+    font-family: "Pirata One", system-ui;
+    color: white;
+    font-weight: 400;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text */
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    font-size: 1rem; /* 16px */
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar a:hover {
+    color: orange; /* Changes color on hover */
+}
+
+
+
+
+
+footer {
+    background: linear-gradient(to right, orange 0%, transparent 130%);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem; /* 16px */
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Responsive Design for Phone */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 80px;
+        width: 80px;
+    }
+
+    .association-name {
+        font-size: 2.052rem; /* Decreased by 5% (from 2.16rem to 2.052rem) */
+    }
+
+    .navbar {
+        font-size: 0.875rem; /* 14px */
+        gap: 10px;
+    }
+
+    
+
+    
+
+
+    footer {
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+@media (max-width: 480px) {
+    .association-name {
+        font-size: 1.5rem; /* Decreased by 5% (from 1.8rem to 1.71rem) */
+    }
+
+    
+}
+/* Contact Us Page Styles */
+.contact-container {
+    padding: 5px 25px;
+    text-align: center;
+    color: white;
+}
+
+.contact-container h1 {
+    font-size: 2.5rem;
+    font-family: "Pirata One", system-ui;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.contact-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+    gap: 20px; /* Space between tiles */
+    justify-content: center;
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.tile {
+    position: relative;
+    width: 100%; /* Full width of the grid cell */
+    aspect-ratio: 1; /* Ensure tiles are square */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tile:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    font-family: "Pirata One", system-ui;
+    color: white;
+    margin: 0;
+}
+
+/* Responsive Design for Contact Page */
+@media (max-width: 768px) {
+    .contact-tiles {
+        grid-template-columns: repeat(3, 1fr); /* Still three columns */
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .tile {
+        aspect-ratio: 1; /* Maintain square shape */
+    }
+
+    .overlay p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-tiles {
+        grid-template-columns: repeat(2, 1fr); /* Still three columns */
+        gap: 15px; /* Further reduce gap for very small screens */
+    }
+
+    .overlay p {
+        font-size: 1rem; /* Adjust font size for very small screens */
+    }
+   
+}
+h1{
+   
+    color: black;
+   
+}
